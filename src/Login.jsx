@@ -28,14 +28,14 @@ const Login = ({ user }) => {
     };
 
     if (user !== null) {
-        return <Navigate to="../login" replace />;
+        return <Navigate to="../dashboard" replace />;
     }
 
     return (
         <>
             <div className="dashboardHeader">
-                <h1>Login to Get Started</h1>
-                <p>Welcome to our Tutorials!</p>
+                <h1>Welcome to Bee Wise!</h1>
+                <p>Log in to get started!</p>
             </div>
             <div className="container minHeight">
                 <StyledFirebaseAuth

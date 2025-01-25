@@ -1,19 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Dashboard = ({ user }) => {
+const Dashboard = () => {
     return (
-        <body>
+        <div>
             <div id="root"></div>
             <script type="module" src="src/index.js"></script>
+
             <div>
-                <h1>Tutorial Landing Page</h1>
-                <p>Welcome! Create and view tutorials below. </p>
+                <h1>Welcome to Bee Wise!</h1>
+                <p>Create and view tutorials below. </p>
                 <ul>
-                    <button onclick="location.href='create.html'">Create Tutorials</button>
-                <button button onclick="location.href='view.html'">Receive Tutorials</button>
+                    <button onClick={useNavigate('/createTutorial')}>Create Tutorials</button>
+                    <button>Receive Tutorials</button>
                 </ul>
             </div>
-        </body>
+        </div>
     );
 };
 

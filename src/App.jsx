@@ -1,11 +1,21 @@
-import React from 'react';
-import Login from './Login.jsx'
-import { Routes, Route } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import Login from './Login.jsx';
+import Dashboard from './Dashboard.jsx'; // Assuming you have a Dashboard component
 import './App.css';
 
-
 function App() {
-    con
+  const [user, setUser] = useState(null);
+  const auth = getAuth();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+        setUser(user);
+    });
+    return () => unsubscribe();
+  }, [auth]);
+
   return (
     <div className="App">
       <header className="App-header">

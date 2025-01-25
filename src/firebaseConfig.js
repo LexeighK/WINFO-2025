@@ -3,13 +3,13 @@ import { getDatabase } from 'firebase/database';
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: 'your-api-key',
-  authDomain: 'your-app.firebaseapp.com',
-  databaseURL: 'https://winfoprojectdb-default-rtdb.firebaseio.com/',
-  projectId: 'your-project-id',
-  storageBucket: 'your-app.appspot.com',
-  messagingSenderId: 'your-sender-id',
-  appId: 'your-app-id',
+  apiKey: "AIzaSyDXVhHPgygKERUe8QUWbbjw6_dq7LmXjJY",
+  authDomain: "winfoprojectdb.firebaseapp.com",
+  databaseURL: "https://winfoprojectdb-default-rtdb.firebaseio.com",
+  projectId: "winfoprojectdb",
+  storageBucket: "winfoprojectdb.firebasestorage.app",
+  messagingSenderId: "821143130847",
+  appId: "1:821143130847:web:24e9c435a273efc8580f6a"
 };
 
 // Initialize Firebase
