@@ -5,11 +5,14 @@ import './styles.css';
 import { NewWorkFlowFormFillout } from "./form-fillout.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles.css";
+import Dashboard from './Dashboard.jsx';
+
 
 function App() {
   return (
       <Routes>
         <Route path="createTutorial" element={< NewWorkFlowFormFillout />}/>
+        <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
       
   );
