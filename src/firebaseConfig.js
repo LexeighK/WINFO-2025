@@ -17,3 +17,4 @@ console.log('Firebase initialized successfully');
 
 // Export the database reference
 export const db = getDatabase(app);
+export const auth = getAuth(app);
