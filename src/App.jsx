@@ -9,7 +9,7 @@ import "./styles.css";
 function App() {
   return (
       <Routes>
-        <Route path="workFlow" element={< NewWorkFlowFormFillout />}/>
+        <Route path="createTutorial" element={< NewWorkFlowFormFillout />}/>
     </Routes>
       
   );
