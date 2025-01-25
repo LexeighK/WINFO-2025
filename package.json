@@ -12,12 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "bootstrap": "^5.3.3",
-=======
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "firebase": "^11.2.0",
->>>>>>> 512f4bbd26b7b9c6377edbaef798244775e58fc5
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.3",

@@ -51,7 +51,6 @@ export function NewWorkFlowFormFillout() {
                     <div className="containter">
                         <div className="row">
                             <div className="col-12 col-md-5 col-lg-4 col-xl-3 bg-light p-3 border-end">
-                                <p>HI</p>
                                 <SubTextArea  info={title} getVal={(val) => setTitle(val)} />
                             </div>
                         </div>
