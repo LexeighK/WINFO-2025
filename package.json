@@ -12,10 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
->>>>>>> main
     "firebase": "^11.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
