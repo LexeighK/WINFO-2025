@@ -1,10 +1,10 @@
 // src/Login.jsx
 import React from 'react';
 // import { Footer } from './Navigation.jsx';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+//import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+//import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { Navigate } from 'react-router-dom';
-import { auth } from './firebaseConfig.js';
+//import { auth } from './firebaseConfig.js';
 
 const Login = ({ user }) => {
     const authenticator = auth;
