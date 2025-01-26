@@ -78,7 +78,7 @@ export function NewWorkFlowFormFillout() {
     let newTutorialObj = null;
     function addTutorial() {
         const db = getDatabase();
-        const tutorialRef = ref(db, "tutorials");
+        const tutorialRef = ref(db, "path");
 
         const newTutorialContent = steps.map((singleStep) => ({
             "step_ID": singleStep.step_ID,
@@ -92,6 +92,8 @@ export function NewWorkFlowFormFillout() {
         }
 
         console.log(newTutorialObj);
+
+        firebasePush(tutorialRef, newTutorialObj);
     }
         
         
