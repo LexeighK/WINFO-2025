@@ -4,10 +4,10 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Login from './Login.jsx';
 import Dashboard from './Dashboard.jsx'; // Assuming you have a Dashboard component
 import { NewWorkFlowFormFillout } from './form-fillout.jsx'; // Assuming you have a NewWorkFlowFormFillout component
-import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState('');
   const auth = getAuth();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login user={user} />} />
           <Route path="/" element={<Login user={user} />} />
-          <Route path="/dashboard" element={<Dashboard user={user} />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createTutorial" element={<NewWorkFlowFormFillout />} />
         </Routes>
       </div>

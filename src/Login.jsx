@@ -5,6 +5,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { Navigate } from 'react-router-dom';
 import { auth } from './firebaseConfig.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = ({ user }) => {
     const authenticator = auth;
@@ -33,7 +34,7 @@ const Login = ({ user }) => {
 
     return (
         <>
-            <div className="dashboardHeader">
+            <div className="justify-content-center align-items-center">
                 <h1>Welcome to Bee Wise!</h1>
                 <p>Log in to get started!</p>
             </div>
