@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-//import { getDatabase, ref, onValue, push as firebasePush} from "firebase/database";
+import { getDatabase, ref, onValue, push as firebasePush} from "firebase/database";
 
 // For INFO 340 I (Lexeigh) coded something similar to this so it is on my mind
 // used AI (chatGPT) for debugging- mainly this was to remember npm installs, or check for errors
@@ -74,7 +74,7 @@ export function NewWorkFlowFormFillout() {
     }
 
     // Creates a Tutorial Object to be added into firebase
-    /*
+    
     let newTutorialObj = null;
     function addTutorial() {
         const db = getDatabase();
@@ -90,8 +90,10 @@ export function NewWorkFlowFormFillout() {
             "title": title,
             "content": newTutorialContent
         }
+
+        console.log(newTutorialObj);
     }
-        */
+        
         
 
     // Handles the creation of multiple steps
@@ -124,12 +126,6 @@ export function NewWorkFlowFormFillout() {
         </div>
         )
     })
-        
-    // submit the tutorial
-    // push to firebase happens here
-    function submitTutorial(event) {
-        addTutorial();
-    }
 
     return(
         <div>
@@ -148,7 +144,7 @@ export function NewWorkFlowFormFillout() {
                         <a className="btn btn-primary m-3 mb-5" onClick={addStep} >Add New Step</a>
                     </div>
                     <div>
-                        <a className="btn btn-primary m-3 mb-5"  onClick={submitTutorial}>Create Tutorial!</a>
+                        <a className="btn btn-primary m-3 mb-5"  onClick={addTutorial}>Create Tutorial!</a>
                     </div>
                 </form>
             </main>
