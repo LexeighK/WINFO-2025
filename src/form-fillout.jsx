@@ -1,8 +1,10 @@
 import React, { useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+//import { getDatabase, ref, onValue, push as firebasePush} from "firebase/database";
 
-// For INFO 340 I (Lexeigh) coded something very similar to this so it is on my mind
+// For INFO 340 I (Lexeigh) coded something similar to this so it is on my mind
+// used AI (chatGPT) for debugging- mainly this was to remember npm installs, or check for errors
 
 // Allows for editable sections
 function SubTextArea({info, getVal, section}) {
@@ -29,12 +31,6 @@ export function NewWorkFlowFormFillout() {
     const [selectedFiles, setSelectedFiles] = useState("");
     // Steps allow for dynamic adding and removing of steps
     const [steps, setSteps] = useState([{step_ID: 1, instructions, img:""},]);
-
-    // for photo uploading
-
-    // for having multiple sections
-
-    // for adding and removing sections
 
     // Handles the addStep button functionality
     function addStep() {
@@ -77,6 +73,27 @@ export function NewWorkFlowFormFillout() {
         reader.readAsDataURL(file);
     }
 
+    // Creates a Tutorial Object to be added into firebase
+    /*
+    let newTutorialObj = null;
+    function addTutorial() {
+        const db = getDatabase();
+        const tutorialRef = ref(db, "tutorials");
+
+        const newTutorialContent = steps.map((singleStep) => ({
+            "step_ID": singleStep.step_ID,
+            "step_instructions": singleStep.instructions,
+            "step_img": singleStep.img || null
+        }));
+
+        newTutorialObj = {
+            "title": title,
+            "content": newTutorialContent
+        }
+    }
+        */
+        
+
     // Handles the creation of multiple steps
     const addRemoveStep = steps.map((step, index) => {
         return (
@@ -108,12 +125,11 @@ export function NewWorkFlowFormFillout() {
         )
     })
         
-    // mapping each individual section
-    
-    // create into a firebase storable object
-
-    // submit the thing
-
+    // submit the tutorial
+    // push to firebase happens here
+    function submitTutorial(event) {
+        addTutorial();
+    }
 
     return(
         <div>
@@ -122,7 +138,7 @@ export function NewWorkFlowFormFillout() {
                 <form>
                     <div className="containter">
                         <div className="row">
-                            <div className="col-12 col-md-5 col-lg-4 col-xl-3 bg-light p-3 border-end">
+                            <div className="card p-3 m-3">
                                 <SubTextArea section="Tutorial Title"  info={title} getVal={(val) => setTitle(val)} />
                             </div>
                             {addRemoveStep}
@@ -130,6 +146,9 @@ export function NewWorkFlowFormFillout() {
                     </div>
                     <div>
                         <a className="btn btn-primary m-3 mb-5" onClick={addStep} >Add New Step</a>
+                    </div>
+                    <div>
+                        <a className="btn btn-primary m-3 mb-5"  onClick={submitTutorial}>Create Tutorial!</a>
                     </div>
                 </form>
             </main>
