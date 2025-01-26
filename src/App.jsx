@@ -4,7 +4,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Login from './Login.jsx';
 import Dashboard from './Dashboard.jsx'; // Assuming you have a Dashboard component
 import { NewWorkFlowFormFillout } from './form-fillout.jsx'; // Assuming you have a NewWorkFlowFormFillout component
-// import './App.css';
+import './styles.css';
 
 function App() {
   const [user, setUser] = useState(null);

@@ -12,7 +12,7 @@ const Dashboard = () => {
                 <p>Create and view tutorials below. </p>
                 <ul>
                     <Link to="/createTutorial">Create Tutorials</Link>
-                    <button>Receive Tutorials</button>
+                    <Link>Receive Tutorials</Link>
                 </ul>
             </div>
         </div>

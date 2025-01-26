@@ -2,12 +2,17 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     margin: 0;
     text-align: center;
+}
+
+div { 
+    padding:10px;
 }
 
 .container {
@@ -15,3 +20,9 @@ body {
     max-width: 600px;
     padding: 20px;
 }
+
+.file {
+    padding: 20px;
+
+}
+

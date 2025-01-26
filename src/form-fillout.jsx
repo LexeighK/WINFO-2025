@@ -82,11 +82,11 @@ export function NewWorkFlowFormFillout() {
         return (
         <div key={step.step_ID} className="card p-3 m-3">
             <h2>Step instructions</h2>
-            <SubTextArea section="Instructions" info={step.instructions} getVal={(val) => handleMultipleStepsInstructions(index, val)} />
+            <SubTextArea section="Instructions  " info={step.instructions} getVal={(val) => handleMultipleStepsInstructions(index, val)} />
             
             
             <div className="form-floating mt-3">
-                <div className="mb-3"><label htmlFor="imageUploadInput">Drag & drop images here: </label></div>
+                <div className="mb-3"><label htmlFor="imageUploadInput"><strong>Drag & drop images here: </strong></label></div>
                 <input
                 type="file"
                 name="image"
@@ -123,9 +123,9 @@ export function NewWorkFlowFormFillout() {
                     <div className="containter">
                         <div className="row">
                             <div className="col-12 col-md-5 col-lg-4 col-xl-3 bg-light p-3 border-end">
-                                <SubTextArea section="Tutorial Title"  info={title} getVal={(val) => setTitle(val)} />
+                                <SubTextArea section="Tutorial Title "  info={title} getVal={(val) => setTitle(val)} />
                             </div>
-                            {addRemoveStep}
+                            {addRemoveStep} 
                         </div>
                     </div>
                     <div>
